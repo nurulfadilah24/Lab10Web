@@ -1,37 +1,55 @@
+## Nama        : Nurul Fadilah
+## NIM         : 312410689
+## Kelas       : TI.24.A3
+## Mata Kuliah : Pemrograman Web 1
+## Dosen       : Agung Nugroho, S.Kom., M.Kom.
+## Universitas : Pelita Bangsa, Bekasi
+
 # 🛒 Sistem Manajemen Barang - PHP OOP
 
 ##  Deskripsi
 Sistem manajemen barang dengan CRUD (Create, Read, Update, Delete) menggunakan PHP OOP. Aplikasi web untuk mengelola data barang dengan upload gambar.
 
 ##  Fitur Utama
-- **CRUD lengkap** (Tambah, Lihat, Ubah, Hapus)
--  **Upload gambar** dengan preview
--  **Kalkulator keuntungan** otomatis
--  **Design responsif** & modern
--  **Validasi form** real-time
--  **Class library** untuk database dan form
+
+✔️ CRUD lengkap (Tambah, Lihat, Ubah, Hapus)
+
+✔️ Upload gambar dengan preview
+
+✔️ Kalkulator keuntungan otomatis
+
+✔️ Design responsif & modern
+
+✔️ Validasi form real-time
+
+✔️ Class library OOP (Database & Form)
 
 ##  Struktur Folder
+
 lab10_php_oop/
-├── index.php # Halaman utama
-├── tambah.php # Form tambah
-├── ubah.php # Form ubah
-├── hapus.php # Proses hapus
-├── style.css # CSS styling
-├── gambar/ # Folder upload
-├── lib/ # Class library
-│ ├── Database.php
-│ └── Form.php
-└── config/ # Konfigurasi
-└── config.php
 
-text
+├── index.php        # Halaman utama
 
-## ⚙️ Instalasi Cepat
+├── tambah.php       # Form tambah
 
-### 1. Setup Database
-```sql
-CREATE DATABASE latihan1;
+├── ubah.php         # Form ubah
+
+├── hapus.php        # Proses hapus
+
+├── style.css        # CSS styling
+
+├── gambar/          # Folder upload
+
+├── lib/              # Class library
+│   ├── Database.php
+│   └── Form.php
+
+└── config/           # Konfigurasi
+    └── config.php
+
+1. Setup Database
+   ```html
+   CREATE DATABASE latihan1;
 USE latihan1;
 
 CREATE TABLE data_barang (
@@ -43,10 +61,10 @@ CREATE TABLE data_barang (
     harga_jual DECIMAL(10,0),
     stok INT(4)
 );
-2. Konfigurasi
-Edit config/config.php:
+```
 
-php
+2. Konfigurasi
+```html
 <?php
 $config = [
     'host' => 'localhost',
@@ -55,100 +73,91 @@ $config = [
     'db_name' => 'latihan1'
 ];
 ?>
-3. Jalankan Aplikasi
-text
-http://localhost/lab10_php_oop/
-🔧 Class Library
+```
+
+Class Library
+
 Database Class
-php
+
+```html
 $db = new Database();
 $db->insert('table', $data);
 $db->update('table', $data, $where);
 $db->delete('table', $where);
+```
+
 Form Class
-php
+
+```html
 $form = new Form('action.php', 'Submit');
 $form->addField('nama', 'Nama Barang');
 $form->displayForm();
+```
 
- Cara Penggunaan
+Cara Pakai
+ ## Halaman Utama (index.php)
 
- Halaman Utama (index.php)
-Tampilkan semua barang
+Tampil semua barang
 
-Tombol Tambah/Ubah/Hapus
+Tombol Tambah / Ubah / Hapus
 
-Tambah Barang (tambah.php)
+## Tambah Barang (tambah.php)
+
 Form input dengan validasi
 
 Upload gambar + preview
 
 Kalkulator keuntungan
 
- Ubah Barang (ubah.php)
+## Ubah Barang (ubah.php)
+
 Edit data yang sudah ada
 
 Preview gambar lama
 
 Hitung profit otomatis
 
- Hapus Barang
+## Hapus Barang
+
 Konfirmasi sebelum hapus
 
 Hapus gambar dari server
 
- Teknologi
-Backend: PHP 7.4+, MySQL, OOP
+## Screenshot
 
-Frontend: HTML5, CSS3, JavaScript
+## index.php
+<img src="docs/<img width="1005" height="642" alt="index" src="https://github.com/user-attachments/assets/99e210b2-e064-4fc3-8f02-6405cad0a8e5" />
+.png" width="450">
 
-Icons: Font Awesome
+## Tambah
+<img src="docs/<img width="557" height="633" alt="tambah barang" src="https://github.com/user-attachments/assets/cc1a8fc4-4fc3-4a49-949d-8d8311149c10" />
+.png" width="450">
 
-Fonts: Google Fonts (Poppins)
+## Ubah
+<img src="docs/<img width="494" height="622" alt="ubah barang" src="https://github.com/user-attachments/assets/a9e729bc-8e29-4322-bcef-0a1a8ae34c5b" />
+.png" width="450">
 
- Responsive Design
-Desktop: Layout 2 kolom
+## Hapus
+<img src="docs/<img width="475" height="144" alt="hapus barang 1" src="https://github.com/user-attachments/assets/93c87179-d785-4a8b-b065-12795d1aab45" />
+.png" width="450">
 
-Tablet: Single column
+<img src="docs/<img width="858" height="499" alt="hapus barang 2" src="https://github.com/user-attachments/assets/bc7701ec-efef-4a25-a279-b2b2fb6d4c44" />
+.png" width="450">
 
-Mobile: Form stacking
+## Kesimpulan
+Praktikum PHP OOP berhasil dilaksanakan dengan baik.
+Sistem manajemen barang yang dibangun telah mengimplementasikan semua konsep OOP yang dipelajari.
 
- Troubleshooting
-Masalah Umum:
-Database error → Cek config.php
+Aplikasi ini memiliki:
 
-Upload gagal → Cek permission folder gambar/
+Arsitektur yang baik
 
-CSS tidak load → Cek path file CSS
+Pemisahan logic melalui class library
 
-JavaScript error → Buka console F12
+Tampilan user-friendly
 
-📸 Screenshot
-1. Halaman Utama (index.php)
-https://docs/index.png
+Fitur CRUD lengkap dan modern
 
-2. Form Tambah Barang
-https://docs/tambah barang.png
 
-3. Form Ubah Barang
-https://docs/ubah barang.png
 
-4. Konfirmasi Hapus
-https://docs/hapus barang 1.png
-https://docs/hapus barang 2.png
-
- Developer
-Nama: Nurul Fadilah
-
-NIM: 312410689
-
-Kelas: TI.24.A3
-
-Mata Kuliah: Pemrograman Web 1
-
-Dosen: Agung Nugroho, S.Kom., M.Kom.
-
-Universitas: Pelita Bangsa, Bekasi
-
- Kesimpulan
 Praktikum PHP OOP berhasil dilaksanakan dengan baik. Sistem manajemen barang yang dibangun telah mengimplementasikan semua konsep OOP yang dipelajari. Aplikasi ini memiliki arsitektur yang baik dengan separasi logic menggunakan class library, interface yang user-friendly, dan fitur-fitur lengkap untuk operasi CRUD
