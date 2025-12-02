@@ -50,17 +50,25 @@ lab10_php_oop/
 1. Setup Database
    ```html
    CREATE DATABASE latihan1;
+   
 USE latihan1;
 
 CREATE TABLE data_barang (
+
     id_barang INT AUTO_INCREMENT PRIMARY KEY,
+    
     kategori VARCHAR(30),
+    
     nama VARCHAR(30),
+    
     gambar VARCHAR(100),
+    
     harga_beli DECIMAL(10,0),
+    
     harga_jual DECIMAL(10,0),
+    
     stok INT(4)
-);
+    );
 ```
 
 2. Konfigurasi
